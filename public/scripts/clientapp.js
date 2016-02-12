@@ -1,9 +1,5 @@
-//var nameArray = [];
-//var animalArray = [];
-
 $(document).ready(function() {
     $('#post-name').on('click', clickPostName);
-    //$('#get-name').on('click', clickGetName);
     $('#post-animal').on('click', clickPostAnimal);
     $('.container').on('click', '#combine', clickCombine);
 
@@ -15,7 +11,6 @@ function clickPostName() {
 
     $.each($('#name-form').serializeArray(), function(i, field) {
         values[field.name] = field.value;
-        //nameArray.push(values);
     });
     //console.log(values);
     //console.log(nameArray);
@@ -49,8 +44,6 @@ function clickPostAnimal() {
     $.each($('#animal-form').serializeArray(), function(i, field) {
         values[field.name] = field.value;
     });
-    //console.log(values);
-    //console.log(nameArray);
 
     $('#post-animal').find('input[type=text]').val('');
 
@@ -74,12 +67,8 @@ function clickPostAnimal() {
     });
 }
 
-
-
 function clickCombine() {
     event.preventDefault();
-
-
 
     $.ajax({
         type: 'GET',
@@ -94,11 +83,6 @@ function clickCombine() {
             //data
             $('#ajax-pairs').children().remove();
             $('#ajax-pairs').append('<div class="pair">' + data + '</div>');
-
         }
     });
-
-
-
-
 }

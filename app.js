@@ -21,7 +21,6 @@ app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, './public/', file));
 });
 
-
 app.listen(app.get('port'), function() {
     console.log('Server is ready on port ' + app.get('port'));
 });

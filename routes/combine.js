@@ -11,17 +11,12 @@ var  randomNumber = function (min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
-
-
 function getPair() {
     var nameRandom = randomNumber(0, nameArray.length);
     var animalRandom = randomNumber(0, animalArray.length);
     finalMagic = nameArray[nameRandom].name + ' ' + animalArray[animalRandom].spiritAnimal;
     console.log(nameArray);
 }
-
-
 
 router.get('/', function(req, res) {
     getPair();

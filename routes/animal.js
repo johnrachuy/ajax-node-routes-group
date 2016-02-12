@@ -13,7 +13,5 @@ router.post('/', function(req, res) {
     res.send(animalArray);
 });
 
-
-
 module.exports.router = router;
 module.exports.animalArray = animalArray;
